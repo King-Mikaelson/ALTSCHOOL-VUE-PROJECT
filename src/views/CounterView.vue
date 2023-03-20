@@ -1,7 +1,7 @@
 <template>
   <div class="counter">
     <div class="value">
-      <h2>Input A Value :</h2>
+      <h2>Input a value :</h2>
       <input v-model="number" type="text" name="input" id="input" placeholder="Input Number Here...."/>
     </div>
     <button class="enter" @click="input">Set Value</button>
@@ -45,17 +45,13 @@ methods:{
   this.$store.dispatch("decrement")
  },
 
-//  reset(){
-//   this.$store.dispatch("reset")
-//  }
-
 
 }
 }
 </script>
 
 
-<style  scoped>
+<style >
 .heading{
   text-align: center;
 }
@@ -69,17 +65,41 @@ methods:{
 .start{
   display:flex;
   justify-content: center;
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
   gap: 2rem
 }
 
 button{
-  padding: 1rem;
+  width: 200px;
+  height:45px;
   background-color: black;
-  color:white
+  margin: 20px;
+  border:1px solid #185a9d;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
 }
+
 
 .enter{
   margin:1rem
+}
+
+
+body{
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #43cea2, #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 </style>
